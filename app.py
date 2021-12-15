@@ -158,7 +158,7 @@ def event_handle(event,json_line):
         elif msg == "ไปเที่ยวมั้ย":
             replyObj = TextSendMessage(text="ไปที่ไหนกันดีล่ะ")
             line_bot_api.reply_message(rtoken, replyObj)
-        else msg == "covid" :
+        elif msg == "covid" :
             url = "https://covid19.ddc.moph.go.th/api/Cases/today-cases-all"
             response = requests.get(url)
             response = response.json()
